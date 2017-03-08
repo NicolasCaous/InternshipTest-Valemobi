@@ -5,7 +5,7 @@ body {
 	background-color:#f4f4f4;
 }
 
-/* global */
+/* Global */
 .container {
 	width:80%;
 	margin:auto;
@@ -24,6 +24,14 @@ ul {
 	padding-left:20px;
 	padding-right:20px;
 	color:#ffffff;
+}
+
+.escuro {
+	padding:15px;
+	background:#4f4f59;
+	color:#ffffff;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 /* Cabeçalho */
@@ -78,7 +86,7 @@ header a:hover {
 	font-weight:bold;
 }
 
-/* showcase */
+/* Showcase */
 #showcase {
 	min-height:400px;
 	background:url('../img/mercado1.jpg') no-repeat 0 0;
@@ -123,22 +131,45 @@ header a:hover {
 	width:250px;
 }
 
+/* Ajutas as caixas */
 #caixas {
 	margin-top:20px;
 }
 
+/* Determina as opções das caixas */
 #caixas .caixa {
 	float:left;
 	text-align:center;
-	width:48%;
+	width:47%;
 	padding:10px;
 }
 
+/* Determina as opções das imagens das caixas */
 #caixas .caixa img {
 	width:90px;
 	height:90px;
 }
 
+/* Desativa a cor azul do link */
+#caixas a {
+	color:#000000;
+	text-decoration:none;
+}
+
+/* Sobre */
+article#sobre {
+	float:left;
+	width: 65%;
+}
+
+/* Curiosidades */
+aside#curiosidades {
+	float:right;
+	width:30%;
+	margin-top:10px;
+}
+
+/* Faz o rodapé ser o rodapé */
 footer {
 	padding:20px;
 	margin-top:20px;
