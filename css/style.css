@@ -1,179 +1,158 @@
-body {
-	font:15px/1.5 Arial, Helvetica, sans-serif;
-	padding:0;
-	margin:0;
-	background-color:#f4f4f4;
-}
+/* Classes */
 
-/* Global */
-.container {
-	width:80%;
-	margin:auto;
-	overflow:hidden;
-}
-
-ul {
-	margin:0;
-	padding:0;
-}
-
-.botao1 {
-	height:38px;
-	background:#e8491d;
-	border:none;
-	padding-left:20px;
-	padding-right:20px;
-	color:#ffffff;
-}
-
-.escuro {
-	padding:15px;
-	background:#4f4f59;
-	color:#ffffff;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-/* Cabeçalho */
-header {
-	background:#4f4f59;
-	color:#ffffff;
-	padding-top:30px;
-	min-height:70px;
-	/* Linha entre cabeçalho e resto */
-	border-bottom:#e8491d 3px solid;
-}
-
-/* Todos os links dentro do cabeçalho */
-header a {
-	color:#ffffff;
-	text-decoration:none;
-	text-transform:uppercase;
-	font-size:16px;
-}
-
-/* Todos os elementos da lista */
-header li {
-	float:left;
-	display:inline;
-	padding:0 20px 0 20px;
-}
-
-/* Deixa a lista de links à direita */
-header nav {
-	float:right;
-	margin-top:10px;
-}
-
-/* Deixa o logo à esquerda */
-header #logo {
-	float:left;
-}
-
-header #logo h1 {
-	margin:0;
-}
-
-/* Destaca logo e página atual */
-header .corlogo, header .atual a {
+.laranja-texto {
 	color:#e8491d;
 	font-weight:bold;
 }
 
-/* Deixa em negrito os links em que o mouse passa por cima */
-header a:hover {
-	color#cccccc;
-	font-weight:bold;
+.img-fix-bs {
+	margin: 0 auto;
 }
 
-/* Showcase */
-#showcase {
-	min-height:400px;
-	background:url('../img/mercado1.jpg') no-repeat 0 0;
-	text-align:center;
-	color:#ffffff;
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
 }
 
-/* Título do showcase */
-#showcase h1 {
-	margin-top:100px;
-	font-size:55px;
-	margin-bottom:10px;
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
 }
 
-/* Parágrafo do showcase */
-#showcase p {
-	font-size:20px;
+.timeline li {
+  margin-bottom: 20px;
+  position: relative;
 }
 
-/* Opções da area de inscrever-se ao feed */
-#feed_novos_posts {
-	padding:15px;
-	color:#ffffff;
-	background:#4f4f59;
+.timeline li:before,
+.timeline li:after {
+  content: " ";
+  display: table;
 }
 
-/* Deixa a frase à esquerda */
-#feed_novos_posts h1 {
-	float:left;
+.timeline li:after {
+  clear: both;
 }
 
-/* Deixa o formulário à direita */
-#feed_novos_posts form {
-	float:right;
-	margin-top:15px;
+.timeline li:before,
+.timeline li:after {
+  content: " ";
+  display: table;
 }
 
-/* Ajusta o formulário à sessão */
-#feed_novos_posts input[type="email"] {
-	padding:4px;
-	height:25px;
-	width:250px;
+.timeline li:after {
+  clear: both;
 }
 
-/* Ajutas as caixas */
-#caixas {
-	margin-top:20px;
+.timeline li .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 
-/* Determina as opções das caixas */
-#caixas .caixa {
-	float:left;
-	text-align:center;
-	width:47%;
-	padding:10px;
+.timeline li .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
 }
 
-/* Determina as opções das imagens das caixas */
-#caixas .caixa img {
-	width:90px;
-	height:90px;
+.timeline li .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
 }
 
-/* Desativa a cor azul do link */
-#caixas a {
-	color:#000000;
-	text-decoration:none;
+.timeline li .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
 
-/* Sobre */
-article#sobre {
-	float:left;
-	width: 65%;
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
 }
 
-/* Curiosidades */
-aside#curiosidades {
-	float:right;
-	width:30%;
-	margin-top:10px;
+.timeline li.timeline-inverted .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
 }
 
-/* Faz o rodapé ser o rodapé */
-footer {
-	padding:20px;
-	margin-top:20px;
-	color:#ffffff;
-	background-color:#e8491d;
-	text-align:center;
+.timeline li.timeline-inverted .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body p,
+.timeline-body ul {
+  margin-bottom: 0;
+}
+
+.timeline-body p + p {
+  margin-top: 5px;
 }
