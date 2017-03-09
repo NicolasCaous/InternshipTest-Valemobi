@@ -1,13 +1,9 @@
 CREATE TABLE mercadoria (
-	cod 	varchar(50) ,
-    tip_mer varchar(50) ,
-    nom 	varchar(50) ,
-    qtd 	Integer(10) ,
-    pre 	decimal(10,5) ,
-    tip_neg varchar(50)
+	cod 	varchar(50) PRIMARY KEY NOT NULL,
+    tip_mer varchar(50) NOT NULL,
+    nom 	varchar(50) NOT NULL,
+    qtd 	Integer(10) NOT NULL,
+    pre 	decimal(10,5) NOT NULL,
+    tip_neg varchar(50) NOT NULL,
+    dia_hor datetime NOT NULL UNIQUE
 )
-
-INSERT INTO mercadoria VALUES ('teste','teste','teste',10,5.30,'vender')
-
-SELECT * FROM mercadoria
-

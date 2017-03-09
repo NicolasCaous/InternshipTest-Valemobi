@@ -58,58 +58,22 @@
 	
 	<div class="container">
 	
-	  <form class="page-header" name="formularioa_anuncio" method="POST" action="anunciar.php">
-		<div class="form-group">
-		  <label for="codigo">C&#243;digo da mercadoria</label>
-		  <textarea class="form-control" id="codigo" name="codigo" rows="1"></textarea>
-		</div>
-		<div class="form-group">
-		  <label for="tipo">Tipo da mercadoria</label>
-		  <textarea class="form-control" id="tipo" name="tipo" rows="1"></textarea>
-		</div>
-		<div class="form-group">
-		  <label for="nome">Nome da mercadoria</label>
-		  <textarea class="form-control" id="nome" name="nome" rows="1"></textarea>
-		</div>
-		<div class="form-group">
-		  <label for="quantidade">Quantidade</label>
-		  <textarea class="form-control" id="quantidade" name="quantidade" rows="1"></textarea>
-		</div>
-		<div class="form-group">
-		  <label for="preco">Pre&#231;o</label>
-		  <textarea class="form-control" id="preco" name="preco" rows="1"></textarea>
-		</div>
-		<fieldset class="form-group">
-		  <legend>Tipo do neg&#243;cio</legend>
-		  <div class="form-check">
-		    <label class="form-check-label">
-			  <input type="radio" class="form-check-input" name="negocio" id="compra" value="compra" checked>
-			  Compra
-		    </label>
-		  </div>
-		  <div class="form-check">
-			<label class="form-check-label">
-			  <input type="radio" class="form-check-input" name="negocio" id="venda" value="venda">
-			  Venda
-			</label>
-		  </div>
-		</fieldset>
-		<button type="submit" class="btn btn-primary">Anunciar</button>
-	  </form>
-
-	  <footer>
-	  
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright &copy; Caous Design 2017</p>
-          </div>
-        </div>
+	  <div class="alert alert-success page-header">
+		<strong>Successo!</strong> O an&#250;ncio foi feito sem erros.
+	  </div>
 		
       </footer>
 	  
 	</div>
+	
+	<div id="runcode"></div>
 
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+	<script>
+		$(function() {
+			$('#runcode').load("sucesso.php");
+		});
+	</script>
   </body>
 </html>
