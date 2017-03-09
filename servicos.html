@@ -1,38 +1,195 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<!-- CHARSET PARA CARACTERES EM PORTUGU�S -->
-		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
-		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Aqui jaz o meu projeto para o teste de est�gio na Valemobi">
-		<meta name="keywords" content="Oportunidade, Web design, Programa��o, Est�gio">
-		<meta name="author" content="Nicolas Caous Fernandes">
-		<title>Desafio Est�gio</title>
-		<link rel="stylesheet" href="./css/style.css">
-	</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+	<meta name="description" content="Projeto para o processo seletivo na Valemobi">
+	<meta name="keywords" content="Oportunidade, Web design">
+	<meta name="author" content="Nicolas Caous Fernandes">
 	
-	<body>
-		<header>
-			<div class="container">
-				<div id="logo">
-					<h1><span class="corlogo">C&V</span> Mercadorias</h1>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="sobre.html">Sobre</a></li>
-						<li  class="atual"><a href="servicos.html">Servi�os</a></li>
-					</ul>
-				</nav>
+    <title>C&V Mercadorias</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+	<div class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+		
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menum">
+		    <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a href="index.html" class="navbar-brand">Valemobi</a>
+		  
+		</div>
+		<div class="collpase navbar-collapse" id="menum">
+		
+		  <ul class="nav navbar-nav">
+		    <li><a href="sobre.html">Sobre</a></li>
+			<li class="active"><a href="servicos.html">Servi&#231;os</a></li>
+		  </ul>
+		  
+		  <form action="" class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+			  <input id="entradaPesquisa" type="text" class="form-control" placeholder="Procurar..." onkeydown="document.getElementById('entradaPesquisa').onkeypress = function(e){
+																													e.preventDefault(); 
+																													if (!e) e = window.event;
+																													var keyCode = e.keyCode || e.which;
+																													if (keyCode == '13'){
+																														document.getElementById('btnProc').click();
+																													} else {
+																														document.getElementById('entradaPesquisa').value = (document.getElementById('entradaPesquisa').value).concat(String.fromCharCode(keyCode));
+																													}																												 
+																												}">
 			</div>
-		</header>
+			<button id="btnProc" type="button" class="btn btn-primary" OnClick="window.location = (&#34;https://www.google.com.br/#safe=off&q=site:cvmercadorias.000webhostapp.com &#34;).concat(document.getElementById('entradaPesquisa').value)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+		  </form>
+		  
+		</div>
+	  </div>
+	</div>
+  
+    <br>
+  
+	<div class="container">
+      <div class="page-header">
+        <h1 id="timeline">Timeline</h1>
+      </div>
+	  
+      <ul class="timeline page-header">
+        <li>
 		
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+		  
+        </li>
+        <li class="timeline-inverted">
 		
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere
+                pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+            </div>
+          </div>
+		  
+        </li>
+        <li>
 		
-		<footer>
-			<p>
-				Caous Design, Copyright &copy; 2017
-			</p>
-		</footer>
-	</body>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+		  
+        </li>
+        <li class="timeline-inverted">
+		
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+		  
+        </li>
+        <li>
+		
+          <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		  
+        </li>
+        <li>
+		
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+		  
+        </li>
+        <li class="timeline-inverted">
+		
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+		  
+        </li>
+      </ul>
+
+      <footer>
+	  
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Caous Design 2017</p>
+          </div>
+        </div>
+		
+      </footer>
+	</div>
+	
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
 </html>

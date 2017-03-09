@@ -1,78 +1,103 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<!-- CHARSET PARA CARACTERES EM PORTUGUÊS -->
-		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
-		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Aqui jaz o meu projeto para o teste de estágio na Valemobi">
-		<meta name="keywords" content="Oportunidade, Web design, Programação, Estágio">
-		<meta name="author" content="Nicolas Caous Fernandes">
-		<title>Desafio Estágio</title>
-		<link rel="stylesheet" href="./css/style.css">
-	</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+	<meta name="description" content="Projeto para o processo seletivo na Valemobi">
+	<meta name="keywords" content="Oportunidade, Web design">
+	<meta name="author" content="Nicolas Caous Fernandes">
 	
-	<body>
-		<header>
-			<div class="container">
-				<div id="logo">
-					<h1><span class="corlogo">C&V</span> Mercadorias</h1>
-				</div>
-				<nav>
-					<ul>
-						<li class="atual"><a href="index.html">Home</a></li>
-						<li><a href="sobre.html">Sobre</a></li>
-						<li><a href="servicos.html">Serviços</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+    <title>C&V Mercadorias</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+	<div class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
 		
-		<section id="showcase">
-			<div class="container">
-				<h1>Sua Solução De Compras & Vendas</h1>
-				<p>
-					Aqui você compra e vende tudo o que precisa e tudo o que deseja!
-				</p>
-			</div>
-		</section>
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menum">
+		    <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a href="index.html" class="navbar-brand">Valemobi</a>
+		  
+		</div>
+		<div class="collpase navbar-collapse" id="menum">
 		
-		<section id="feed_novos_posts">
-			<div class="container">
-				<h1>Receba Notificações De Novos Produtos</h1>
-				<form>
-					<input type="email" placeholder="Digite o Email...">
-					<button type="submit" class="botao1">Assine</button>
-				</form>
+		  <ul class="nav navbar-nav">
+		    <li><a href="sobre.html">Sobre</a></li>
+			<li><a href="servicos.html">Servi&#231;os</a></li>
+		  </ul>
+		  <form action="" class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+			  <input id="entradaPesquisa" type="text" class="form-control" placeholder="Procurar..." onkeydown="document.getElementById('entradaPesquisa').onkeypress = function(e){
+																													e.preventDefault(); 
+																													if (!e) e = window.event;
+																													var keyCode = e.keyCode || e.which;
+																													if (keyCode == '13'){
+																														document.getElementById('btnProc').click();
+																													} else {
+																														document.getElementById('entradaPesquisa').value = (document.getElementById('entradaPesquisa').value).concat(String.fromCharCode(keyCode));
+																													}																												 
+																												}">
 			</div>
-		</section>
-		
-		<section id="caixas">
-			<div class="container">
-				<a href="https://www.google.com.br">
-					<div class="caixa">
-						<img src="./img/comprar.png">
-						<h3>COMPRAS</h3>
-						<p>
-							Aperte aqui para começar a comprar!
-						</p>
-					</div>
-				</a>
-				<a href="https://www.bing.com/">
-					<div class="caixa">
-					<img src="./img/vender.png">
-						<h3>VENDAS</h3>
-						<p>
-							Aperte aqui para começar a vender!
-						</p>
-					</div>
-				</a>
+			<button id="btnProc" type="button" class="btn btn-primary" OnClick="window.location = (&#34;https://www.google.com.br/#safe=off&q=site:cvmercadorias.000webhostapp.com &#34;).concat(document.getElementById('entradaPesquisa').value)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+		  </form>
+		  
+		</div>
+	  </div>
+	</div>
+  
+	<div class="jumbotron container page-header">
+	  <h1><span class="laranja-texto">C&V</span> Mercadorias</h1>
+	  <h3>Sua Solu&#231;&#227;o De Compras & Vendas</h3>
+	</div>
+	
+	<div class="container">
+	  <div class="row page-header">
+		<div class="col-sm-6 col-md-3">
+		  <div class="thumbnail">
+		  
+			<img src="./img/comprar.png" height="100">
+			<div class="caption">
+			  <h3>COMPRAR</h3>
+			  <p>Aperte aqui para come&#231;ar a comprar produtos!</p>
+			  <p><a href="servicos.html" class="btn btn-primary" role="button">Aperte Aqui!</a></p>
 			</div>
-		</section>
-		
-		<footer>
-			<p>
-				Caous Design, Copyright &copy; 2017
-			</p>
-		</footer>
-	</body>
+			
+		  </div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+		  <div class="thumbnail">
+		  
+			<img src="./img/vender.png" height="100">
+			<div class="caption">
+			  <h3>VENDER</h3>
+			  <p>Aperte aqui para come&#231;ar a vender produtos!</p>
+			  <p><a href="#" class="btn btn-primary" role="button">Aperte Aqui!</a></p>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+	  
+	  <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Caous Design 2017</p>
+          </div>
+        </div>
+      </footer>
+	  
+	</div>
+
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
 </html>
