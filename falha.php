@@ -1,5 +1,5 @@
 <?php
-	redirect("vender.html");
+	redirect("vender_falha.html");
 		
 	// Redirecionar para url
 	function redirect($url) {

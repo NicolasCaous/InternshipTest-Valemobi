@@ -1,5 +1,5 @@
 <?php
-	redirect("servicos.html");
+	redirect("servicos_sucesso.html");
 		
 	// Redirecionar para url
 	function redirect($url) {
