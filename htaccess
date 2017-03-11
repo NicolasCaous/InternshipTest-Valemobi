@@ -1,8 +1,0 @@
-# HTID:630803: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
-AddType application/x-httpd-php .html .htm
-php_value display_errors 1
-<files "php.ini">
-  order deny,allow
-  deny from all
-</files>
-# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:630803:

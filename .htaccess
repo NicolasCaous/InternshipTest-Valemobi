@@ -1,0 +1,18 @@
+# HTID:630803: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+AddType application/x-httpd-php .html .htm
+php_value display_errors 1
+
+Order Deny,Allow
+Deny from all
+Allow from 127.0.0.1
+<Files "*.html">
+    Order Allow,Deny
+    Allow from all
+</Files>
+<Files "google8b73b599ec1df24a.html">
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Files>
+
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:630803:
