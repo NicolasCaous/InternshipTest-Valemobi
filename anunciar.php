@@ -1,8 +1,10 @@
 <?php
-	$servername = "sql10.freemysqlhosting.net";
-	$username = "sql10162808";
-	$password = "5tLLAZBDfd";
-	$dbname = "sql10162808";
+	$conf = parse_ini_file("php.ini");
+
+	$servername = $conf["servername"];
+	$username = $conf["username"];
+	$password = $conf["password"];
+	$dbname = $conf["dbname"];
 
 	// Cria conexão
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
