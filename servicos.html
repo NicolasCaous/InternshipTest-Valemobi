@@ -80,7 +80,7 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 			
-			$sql = "SELECT * FROM mercadoria";
+			$sql = "SELECT * FROM mercadoria ORDER BY dia_hor DESC";
 			$result = $conn->query($sql);
 			
 			if ($result->num_rows > 0) {
